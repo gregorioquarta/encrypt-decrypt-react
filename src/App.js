@@ -1,5 +1,6 @@
 import CryptoJS from "crypto-js";
 import { useState } from "react";
+import Login from './login'
 
 function App() {
   const [text, setText] = useState("");
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <div className="container">
+      <Login></Login>
       <div>
         <button
           className="btn btn-left"

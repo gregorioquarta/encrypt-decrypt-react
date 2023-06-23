@@ -23,12 +23,12 @@ export default function Login() {
         
         // let verify = {
         //     num1 : 1,
-        //     num2 : 0,
-        //     num3 : 1,
-        //     num4 : 5
+        //     num2 : 7,
+        //     num3 : 0,
+        //     num4 : 1
         // }
         
-        if(code.num1 === 1 && code.num2 === 0 && code.num3 === 1  && code.num4 === 5) {
+        if(code.num1 === 1 && code.num2 === 7 && code.num3 === 0  && code.num4 === 1) {
             setUnlock(true)
             
             console.log("true")

@@ -4,7 +4,7 @@ import Login from './login'
 
 function App() {
   const [text, setText] = useState("");
-  const [screen, setScreen] = useState("encrypt");
+  const [screen, setScreen] = useState("decrypt");
 
   const [encrptedData, setEncrptedData] = useState("");
   const [decrptedData, setDecrptedData] = useState("");
@@ -21,9 +21,15 @@ function App() {
   };
 
   const decryptData = () => {
-    const bytes = CryptoJS.AES.decrypt(text, secretPass);
-    const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
-    setDecrptedData(data);
+    // const bytes = CryptoJS.AES.decrypt(text, secretPass);
+    // const data = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+
+    if(text === '9@e8!24D3f6B1c9a8$2D') {
+
+      setDecrptedData('yale');
+    } else {
+      setDecrptedData('');
+    }
   };
 
   const switchScreen = (type) => {
@@ -44,7 +50,7 @@ function App() {
     <div className="container">
       <Login></Login>
       <div>
-        <button
+        {/* <button
           className="btn btn-left"
           style={{
             backgroundColor: screen === "encrypt" ? "#5e35b1" : "#5e35b130",
@@ -54,7 +60,7 @@ function App() {
           }}
         >
           Encrypt
-        </button>
+        </button> */}
 
         <button
           className="btn btn-right"
@@ -89,7 +95,7 @@ function App() {
 
       {encrptedData || decrptedData ? (
         <div className="content">
-          <label>{screen === "encrypt" ? "Encrypted" : "Decrypted"} Data</label>
+          <label>{screen === "encrypt" ? "Encrypted" : "Données décryptées"} </label>
           <p>{screen === "encrypt" ? encrptedData : decrptedData}</p>
         </div>
       ) : null}

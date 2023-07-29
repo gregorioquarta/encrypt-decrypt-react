@@ -6,7 +6,8 @@
     justify-content: space-evenly;
     position: absolute;
     top: 0px;
-    background-image: url('../public/cia.jpg');
+    background-image: url('../public/hopper.png');
+    background-size: cover;
     background-position: center;
     
     z-index: 5;
